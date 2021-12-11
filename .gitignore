@@ -1,6 +1,14 @@
 # Python unittest
 src/tests/.pytest_cache
 
+# databases
+src/databases/csv/*.txt
+src/databases/pickle/*.bin
+src/databases/json/*.json
+
+# configs
+src/application.properties
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

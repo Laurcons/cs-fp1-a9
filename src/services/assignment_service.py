@@ -16,7 +16,9 @@ class AssignmentService:
 
     def populate(self):
         """ Adds a couple of entries. """
-        self.__assignment_repository.insert_all([
+        if self.__assignment_repository.count() != 0:
+            return
+        self.__assignment_repository.add_all([
             Assignment(1, "Assignment 1", datetime.datetime.now() + datetime.timedelta(days=-10)),
             Assignment(2, "Assignment 2", datetime.datetime.now() + datetime.timedelta(days=20)),
             Assignment(3, "Assignment 3", datetime.datetime.now() + datetime.timedelta(days=30)),

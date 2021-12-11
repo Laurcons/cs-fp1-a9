@@ -247,7 +247,7 @@ class Console:
             if option == 'x':
                 break
             option = int(option)
-            try:
-                options[option]()
-            except BaseException as e:
-                print(f"Something has happened. {e}")
+            # try:
+            options[option]()
+            # except BaseException as e:
+            #     print(f"Something has happened. {e}")

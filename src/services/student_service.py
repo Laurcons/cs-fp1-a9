@@ -14,7 +14,9 @@ class StudentService:
 
     def populate(self):
         """ Adds a couple of entries. """
-        self.__student_repository.insert_all([
+        if self.__student_repository.count() != 0:
+            return
+        self.__student_repository.add_all([
             Student(1, "Pricop Laurentiu", "916"),
             Student(2, "Edward Iakab", "913"),
             Student(3, "Briana Salagean", "916"),
